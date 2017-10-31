@@ -1,0 +1,27 @@
+.inner-header {
+  display: flex;
+  justify-content: center;
+  
+  background: green;
+}
+
+.inner-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  width: 320px;
+  height: 0;
+  min-height: 435px;
+}
+
+.inner-header__title {
+  margin-top: 100px;
+  
+  text-align: center;
+}
+
+.inner-header__order-menu {
+  margin-bottom: 100px;
+}
