@@ -1,0 +1,19 @@
+.projects {
+  display: flex;
+  justify-content: center;
+  
+  background-color: pink;
+}
+
+.projects__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  width: 320px;
+  
+  background: grey;
+}
+
+
+

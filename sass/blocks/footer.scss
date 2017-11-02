@@ -1,0 +1,22 @@
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__contacts-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  width: 320px;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  min-height: 136px;
+  
+  background-color: yellow;
+}
