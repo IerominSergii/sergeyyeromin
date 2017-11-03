@@ -4,13 +4,12 @@
   justify-content: flex-end;
   
   padding-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .form__top {
   display: block;
   
+  width: 100%;
   margin: 0;
   padding: 0;
   
@@ -18,6 +17,7 @@
 }
 
 .form__fieldset-wrapper {
+  width: 100%;
   margin-bottom: 10px;
 }
 
@@ -53,4 +53,10 @@
   
   width: 107px;
   height: 36px;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    margin-top: 25px;
+  }
 }

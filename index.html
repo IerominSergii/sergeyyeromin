@@ -14,7 +14,7 @@
     <!-- <svg style="display: none">
       <include src="build/img/sprite.svg"></include>
     </svg> -->
-    <header class="header">
+    <header class="header" id="home">
       <div class="header__wrapper">
         <nav class="header__nav">
           <a class="header__logo">
@@ -22,9 +22,15 @@
           </a>
           <div class="header__toggle">Menu</div>
           <ul class="header__menu">
-            <li class="header__menu-item header__home">Home</li>
-            <li class="header__menu-item header__projects">Projects</li>
-            <li class="header__menu-item header__contacts">Contacts</li>
+            <li class="header__menu-item header__home">
+              <a class="header__menu-link active" href="#home">Home</a>
+            </li>
+            <li class="header__menu-item header__projects">
+              <a class="header__menu-link" href="#projects">Projects</a>
+            </li>
+            <li class="header__menu-item header__contacts">
+              <a class="header__menu-link" href="#contacts">Contacts</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -40,35 +46,45 @@
           </ul>
         </div>
       </header>
-      <section class="page-index__projects projects">
+      <section class="page-index__projects projects" id="projects">
         <div class="projects__wrapper">
           <h2 class="projects__title visually-hidden">Projects</h2>
           <article class="projects__project project">
             <a class="project__image-link">
-              <img class="project__image" src="http://placehold.it/300x200" width ="300" height="200" alt="project">
-              <!-- <picture class="project__picture"></picture> -->
+              <picture>
+                <source srcset="http://placehold.it/300x200" media="(min-width: 1150px)">
+                <source srcset="http://placehold.it/500x350" media="(min-width: 768px)">
+                <img class="project__image" src="http://placehold.it/260x200" alt="project">
+              </picture>
             </a>
             <div class="project__info">
               <h3 class="project__title">Mishka</h3>
               <p class="project__description">Handmade well-crafted goods online shop - Mishka. </p>
-              <div class="project__type">Website</div>
-              <div class="project__technology">html&css</div>
-              <div class="project__technology">JavaScript</div>
-              <div class="project__technology">Responsive design</div>
+              <div class="project__technologies">
+                <div class="project__item project__type">Website</div>
+                <div class="project__item project__technology">html&css</div>
+                <div class="project__item project__technology">JavaScript</div>
+                <div class="project__item project__technology">Responsive design</div>
+              </div>
             </div>
           </article>
           <article class="projects__project project">
             <a class="project__image-link">
-              <img class="project__image" src="http://placehold.it/300x200" width ="300" height="200" alt="project">
-              <!-- <picture class="project__picture"></picture> -->
+              <picture>
+                <source srcset="http://placehold.it/300x200" media="(min-width: 1150px)">
+                <source srcset="http://placehold.it/500x350" media="(min-width: 768px)">
+                <img class="project__image" src="http://placehold.it/260x200" alt="project">
+              </picture>
             </a>
             <div class="project__info">
               <h3 class="project__title">Mishka</h3>
               <p class="project__description">Handmade well-crafted goods online shop - Mishka. </p>
-              <div class="project__type">Website</div>
-              <div class="project__technology">html&css</div>
-              <div class="project__technology">JavaScript</div>
-              <div class="project__technology">Responsive design</div>
+              <div class="project__technologies">
+                <div class="project__item project__type">Website</div>
+                <div class="project__item project__technology">html&css</div>
+                <div class="project__item project__technology">JavaScript</div>
+                <div class="project__item project__technology">Responsive design</div>
+              </div>
             </div>
           </article>
         </div>
@@ -79,14 +95,14 @@
         <h2 class="map__title visually-hidden">Projects</h2>
         <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2576.130259948444!2d24.017679184409822!3d49.78361530114731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae7d4a272a889%3A0x91c11c1720da375e!2z0JHQsNCz0LDRgtC-0LrQstCw0YDRgtC40YDQvdC40Lkg0LHRg9C00LjQvdC-0LosINCy0YPQu9C40YbRjyDQmtCw0YDQu9CwINCc0ZbQutC70YzQvtGI0LAsIDE1LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1sru!2sua!4v1509386748979" frameborder="0" style="border:0" allowfullscreen></iframe>
       </section>
-      <section class="footer__contacts">
+      <section id="contacts" class="footer__contacts">
         <div class="footer__contacts-wrapper">
           <div class="contacts">
             <img class="contacts__user-photo" src="http://placehold.it/130x130" width ="130" height="130" alt="user-photo">
             <!-- <picture class="contacts__user-photo">
             </picture> -->
             <div class="contacts__phone">
-              <a href="tel:9027197079" class="contacts__phone-link">+1 (902) 719-7079</a>
+              <a class="contacts__phone-link" href="tel:9027197079">+1 (902) 719-7079</a>
             </div>
             <ul class="contacts__social social">
               <li class="social__item social__git">

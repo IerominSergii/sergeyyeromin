@@ -1,9 +1,52 @@
 .contacts {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: flex-start;
+  
   width: 130px;
   min-height: 260px;
   
   margin-top: -65px;
-  margin-left: 95px;
-  margin-right: 95px;
+  margin-left: 65px;
+  margin-right: 65px;
   z-index: 10;
+}
+
+.contacts__user-photo {
+  display: block;
+  
+  width: 130px;
+  height: 130px;
+  margin-bottom: 13px;
+}
+
+.contacts__phone {
+  margin-bottom: 25px;
+}
+
+.contacts__phone-link {
+  display: block;
+  // min-width: 130px;
+  min-height: 30px;
+  padding: 8px 12px;
+  
+  font-size: 12px;
+  vertical-align: 14px;
+  font-weight: 700;
+  background-color: green;
+}
+
+.contacts__social {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    flex-shrink: 0;
+    
+    margin-left: 47px;
+    margin-right: 47px;
+  }
 }

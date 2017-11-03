@@ -15,5 +15,10 @@
   background: grey;
 }
 
+@media (min-width: $tablet-width) {
+  .projects__wrapper {
+    width: 708px;
+  }
+}
 
 

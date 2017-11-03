@@ -1,6 +1,7 @@
 body {
   min-width: 320px;
-  // font-family: $main-font-family;
+  
+  font-family: $main-font-family;
   // font-weight: 400;
 
   background-color: white;
@@ -23,6 +24,11 @@ ul {
   padding: 0;
   
   list-style: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {

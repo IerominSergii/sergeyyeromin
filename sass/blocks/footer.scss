@@ -8,7 +8,7 @@
   justify-content: center;
   flex-wrap: wrap;
   
-  width: 320px;
+  width: 260px;
 }
 
 .footer__bottom {
@@ -18,5 +18,13 @@
   
   min-height: 136px;
   
-  background-color: yellow;
+  background-color: green;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__contacts-wrapper {
+    width: 708px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
