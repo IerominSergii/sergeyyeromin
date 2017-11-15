@@ -1,9 +1,4 @@
 .contacts {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // align-items: flex-start;
-  
   width: 130px;
   min-height: 260px;
   
@@ -16,9 +11,12 @@
 .contacts__user-photo {
   display: block;
   
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: auto;
   margin-bottom: 13px;
+  
+  border-radius: 50%;
+  border: 5px solid $bg-color;
 }
 
 .contacts__phone {
@@ -27,14 +25,25 @@
 
 .contacts__phone-link {
   display: block;
-  // min-width: 130px;
   min-height: 30px;
   padding: 8px 12px;
   
-  font-size: 12px;
+  font-size: 11px;
   vertical-align: 14px;
   font-weight: 700;
-  background-color: green;
+  
+  border-radius: 5px;
+  background-color: $bg-color-third;
+}
+
+.contacts__phone-link:hover {
+  color: $bg-color-third;
+  background-color: $bg-color-fourth;
+}
+
+.contacts__phone-link:active {
+  padding-top: 9px;
+  padding-bottom: 7px;
 }
 
 .contacts__social {

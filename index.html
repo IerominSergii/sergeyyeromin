@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Sergey Yeromin | Web Design & Web Development</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <script src="js/picturefill.js" async></script>
     <script src="js/svg4everybody.js"></script>
     <!-- <script>svg4everybody();</script> -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   </head>
   <body>
-    <!-- <svg style="display: none">
+    <svg style="display: none">
       <include src="build/img/sprite.svg"></include>
-    </svg> -->
+    </svg>
     <header class="header" id="home">
       <div class="header__wrapper">
-        <nav class="header__nav">
-          <a class="header__logo">
-            <img class="header__logo-image" src="http://placehold.it/215x40" width ="215" height="40" alt="logo">
-          </a>
-          <div class="header__toggle">Menu</div>
+        <!-- id="menu" is for smooth transition by the page -->
+        <nav class="header__nav header__nav--nojs" id="menu">
+          <div class="header__logo">
+            <div class="header__logo-wrapper">
+              <span class="header__logo-name">Sergey Yeromin</span>
+              <span class="header__technologies">Web Design & Development</span>
+            </div>
+          </div>
+          <div class="header__toggle header__toggle--hidden">Menu</div>
           <ul class="header__menu">
-            <li class="header__menu-item header__home">
-              <a class="header__menu-link active" href="#home">Home</a>
-            </li>
             <li class="header__menu-item header__projects">
               <a class="header__menu-link" href="#projects">Projects</a>
             </li>
@@ -38,11 +40,23 @@
     <main class="page-index">
       <header class="page-index__header inner-header">
         <div class="inner-header__wrapper">
-          <h1 class="inner-header__title">Front-end Web Developer.</h1>
-          <div class="inner-header__text">I design & build user interfaces, landing pages, corporate websites and web applications.</div>
+          <h1 class="inner-header__title">Front-end Web Developer</h1>
+          <div class="inner-header__text">
+            <p class="inner-header__inner-text">I design & build user interfaces, landing pages, corporate websites and web applications.</p>
+          </div>
           <ul class="inner-header__order-menu">
-            <li class="inner-header__order-item inner-header__website">I need a website</li>
-            <li class="inner-header__order-item inner-header__hire">I'm looking to hire</li>
+            <li class="inner-header__order-item inner-header__website">
+              <a class="inner-header__order-link" href="#contacts">
+                I need a website
+                <span class="inner-header__icon-shevron"></span>
+              </a>
+            </li>
+            <li class="inner-header__order-item inner-header__hire">
+              <a class="inner-header__order-link" href="#contacts">
+                I'm looking to hire
+                <span class="inner-header__icon-shevron"></span>
+              </a>
+            </li>
           </ul>
         </div>
       </header>
@@ -50,16 +64,20 @@
         <div class="projects__wrapper">
           <h2 class="projects__title visually-hidden">Projects</h2>
           <article class="projects__project project">
-            <a class="project__image-link">
-              <picture>
-                <source srcset="http://placehold.it/300x200" media="(min-width: 1150px)">
-                <source srcset="http://placehold.it/500x350" media="(min-width: 768px)">
-                <img class="project__image" src="http://placehold.it/260x200" alt="project">
+            <a class="project__image-link" href="mishka/index.html">
+              <picture class="project__picture">
+                <source type="image/webp" srcset="img/mishka-desktop@1x.webp 1x, img/mishka-desktop@2x.webp 2x" media="(min-width: 1150px)">
+                <source type="image/webp" srcset="img/mishka-tablet@1x.webp 1x, img/mishka-tablet@2x.webp 2x" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/mishka-mobile@1x.webp 1x, img/mishka-mobile@2x.webp 2x">
+                
+                <source srcset="img/mishka-desktop@1x.jpg 1x, img/mishka-desktop@2x.jpg 2x" media="(min-width: 1150px)">
+                <source srcset="img/mishka-tablet@1x.jpg 1x, img/mishka-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                <img class="project__image" src="img/mishka-mobile@1x.jpg" srcset="img/mishka-mobile@2x.jpg 2x" alt="mishka">
               </picture>
             </a>
             <div class="project__info">
               <h3 class="project__title">Mishka</h3>
-              <p class="project__description">Handmade well-crafted goods online shop - Mishka. </p>
+              <p class="project__description">Mishka is a small store of handmade well-crafted goods.</p>
               <div class="project__technologies">
                 <div class="project__item project__type">Website</div>
                 <div class="project__item project__technology">html&css</div>
@@ -70,20 +88,90 @@
           </article>
           <article class="projects__project project">
             <a class="project__image-link">
-              <picture>
-                <source srcset="http://placehold.it/300x200" media="(min-width: 1150px)">
-                <source srcset="http://placehold.it/500x350" media="(min-width: 768px)">
-                <img class="project__image" src="http://placehold.it/260x200" alt="project">
+              <picture class="project__picture">
+                <source type="image/webp" srcset="img/kekstagram-desktop@1x.webp 1x, img/kekstagram-desktop@2x.webp 2x" media="(min-width: 1150px)">
+                <source type="image/webp" srcset="img/kekstagram-tablet@1x.webp 1x, img/kekstagram-tablet@2x.webp 2x" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/kekstagram-mobile@1x.webp 1x, img/kekstagram-mobile@2x.webp 2x">
+                
+                <source srcset="img/kekstagram-desktop@1x.jpg 1x, img/kekstagram-desktop@2x.jpg 2x" media="(min-width: 1150px)">
+                <source srcset="img/kekstagram-tablet@1x.jpg 1x, img/kekstagram-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                <img class="project__image" src="img/kekstagram-mobile@1x.jpg" srcset="img/kekstagram-mobile@2x.jpg 2x" alt="kekstagram">
               </picture>
             </a>
             <div class="project__info">
-              <h3 class="project__title">Mishka</h3>
-              <p class="project__description">Handmade well-crafted goods online shop - Mishka. </p>
+              <h3 class="project__title">Kekstagram</h3>
+              <p class="project__description">Photo-sharing application and service that allows users to share pictures</p>
+              <div class="project__technologies">
+                <div class="project__item project__type">JavaScript</div>
+                <div class="project__item project__technology">AJAX</div>
+                <div class="project__item project__technology">JSON</div>
+                <div class="project__item project__technology">XMLHttpRequest</div>
+              </div>
+            </div>
+          </article>
+          <article class="projects__project project">
+            <a class="project__image-link">
+              <picture class="project__picture">
+                <source type="image/webp" srcset="img/gllasy-desktop@1x.webp 1x, img/gllasy-desktop@2x.webp 2x" media="(min-width: 1150px)">
+                <source type="image/webp" srcset="img/gllasy-tablet@1x.webp 1x, img/gllasy-tablet@2x.webp 2x" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/gllasy-mobile@1x.webp 1x, img/gllasy-mobile@2x.webp 2x">
+                
+                <source srcset="img/gllasy-desktop@1x.jpg 1x, img/gllasy-desktop@2x.jpg 2x" media="(min-width: 1150px)">
+                <source srcset="img/gllasy-tablet@1x.jpg 1x, img/gllasy-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                <img class="project__image" src="img/gllasy-mobile@1x.jpg" srcset="img/gllasy-mobile@2x.jpg 2x" alt="gllasy">
+              </picture>
+            </a>
+            <div class="project__info">
+              <h3 class="project__title">Gllasy</h3>
+              <p class="project__description">Just web-site of Ice-cream shop</p>
               <div class="project__technologies">
                 <div class="project__item project__type">Website</div>
                 <div class="project__item project__technology">html&css</div>
                 <div class="project__item project__technology">JavaScript</div>
-                <div class="project__item project__technology">Responsive design</div>
+              </div>
+            </div>
+          </article>
+          <article class="projects__project project">
+            <a class="project__image-link">
+              <picture class="project__picture">
+                <source type="image/webp" srcset="img/nerds-desktop@1x.webp 1x, img/nerds-desktop@2x.webp 2x" media="(min-width: 1150px)">
+                <source type="image/webp" srcset="img/nerds-tablet@1x.webp 1x, img/nerds-tablet@2x.webp 2x" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/nerds-mobile@1x.webp 1x, img/nerds-mobile@2x.webp 2x">
+                
+                <source srcset="img/nerds-desktop@1x.jpg 1x, img/nerds-desktop@2x.jpg 2x" media="(min-width: 1150px)">
+                <source srcset="img/nerds-tablet@1x.jpg 1x, img/nerds-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                <img class="project__image" src="img/nerds-mobile@1x.jpg" srcset="img/nerds-mobile@2x.jpg 2x" alt="nerds">
+              </picture>
+            </a>
+            <div class="project__info">
+              <h3 class="project__title">Nerds</h3>
+              <p class="project__description">Photo-sharing application and service that allows users to share pictures</p>
+              <div class="project__technologies">
+                <div class="project__item project__type">Website</div>
+                <div class="project__item project__technology">html&css</div>
+                <div class="project__item project__technology">JavaScript</div>
+              </div>
+            </div>
+          </article>
+          <article class="projects__project project">
+            <a class="project__image-link">
+              <picture class="project__picture">
+                <source type="image/webp" srcset="img/barbershop-desktop@1x.webp 1x, img/barbershop-desktop@2x.webp 2x" media="(min-width: 1150px)">
+                <source type="image/webp" srcset="img/barbershop-tablet@1x.webp 1x, img/barbershop-tablet@2x.webp 2x" media="(min-width: 768px)">
+                <source type="image/webp" srcset="img/barbershop-mobile@1x.webp 1x, img/barbershop-mobile@2x.webp 2x">
+                
+                <source srcset="img/barbershop-desktop@1x.jpg 1x, img/barbershop-desktop@2x.jpg 2x" media="(min-width: 1150px)">
+                <source srcset="img/barbershop-tablet@1x.jpg 1x, img/barbershop-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                <img class="project__image" src="img/barbershop-mobile@1x.jpg" srcset="img/barbershop-mobile@2x.jpg 2x" alt="barbershop">
+              </picture>
+            </a>
+            <div class="project__info">
+              <h3 class="project__title">Barbershop</h3>
+              <p class="project__description">Photo-sharing application and service that allows users to share pictures</p>
+              <div class="project__technologies">
+                <div class="project__item project__type">Website</div>
+                <div class="project__item project__technology">html&css</div>
+                <div class="project__item project__technology">JavaScript</div>
               </div>
             </div>
           </article>
@@ -95,38 +183,42 @@
         <h2 class="map__title visually-hidden">Projects</h2>
         <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2576.130259948444!2d24.017679184409822!3d49.78361530114731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae7d4a272a889%3A0x91c11c1720da375e!2z0JHQsNCz0LDRgtC-0LrQstCw0YDRgtC40YDQvdC40Lkg0LHRg9C00LjQvdC-0LosINCy0YPQu9C40YbRjyDQmtCw0YDQu9CwINCc0ZbQutC70YzQvtGI0LAsIDE1LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1sru!2sua!4v1509386748979" frameborder="0" style="border:0" allowfullscreen></iframe>
       </section>
-      <section id="contacts" class="footer__contacts">
+      <section class="footer__contacts" name="contacts">
         <div class="footer__contacts-wrapper">
           <div class="contacts">
-            <img class="contacts__user-photo" src="http://placehold.it/130x130" width ="130" height="130" alt="user-photo">
-            <!-- <picture class="contacts__user-photo">
-            </picture> -->
+            <picture class="contacts__user-picture">
+              <source type="image/webp" srcset="img/ava@1x.webp 1x, img/ava@2x.webp 2x">
+              <img class="contacts__user-photo" id="contacts" src="img/ava@1x.jpg" srcset="img/ava@2x.jpg 2x" width ="130" alt="user-photo">
+            </picture>
             <div class="contacts__phone">
-              <a class="contacts__phone-link" href="tel:9027197079">+1 (902) 719-7079</a>
+              <a class="contacts__phone-link" href="tel:0636590054">+38 (063) 659-0054</a>
             </div>
             <ul class="contacts__social social">
               <li class="social__item social__git">
-                <a href="#">
+                <a class="social__link" href="https://github.com/IerominSergii" target="_blank">
                   <span class="visually-hidden">git link</span>
-                  <!-- <svg></svg> -->
-                  <img class="social__icon" src="http://placehold.it/20x20" width ="20" height="20" alt="git">
+                  <svg class="social__icon social__icon-github" width="29" height="29">
+                    <use xlink:href="#icon-github"></use>
+                  </svg>
                   git
                 </a>
               </li>
               <li class="social__item social__skype">
-                <a href="">
+                <a class="social__link" href="skype:s-eremin?call">
                   <span class="visually-hidden">skype link</span>
-                  <!-- <svg></svg> -->
-                  <img class="social__icon" src="http://placehold.it/20x20" width ="20" height="20" alt="skype">
+                  <svg class="social__icon social__icon-skype" width="30" height="30">
+                    <use xlink:href="#icon-skype"></use>
+                  </svg>
                   skype
                 </a>
               </li>
               <li class="social__item social__linkedin">
-                <a href="">
+                <a class="social__link" href="https://www.facebook.com/profile.php?id=100001829714922" target="_blank">
                   <span class="visually-hidden">linkedin link</span>
-                  <!-- <svg></svg> -->
-                  <img class="social__icon" src="http://placehold.it/20x20" width ="20" height="20" alt="linkedin">
-                  linkedin
+                  <svg class="social__icon social__icon-facebook" width="30" height="30">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg>
+                  facebook
                 </a>
               </li>
             </ul>
@@ -153,5 +245,9 @@
         </ul>
       </div>
     </footer>
+    
+    <script src="js/smoothTransition.js"></script>
+    <script src="js/mobileMenu.js"></script>
+    
   </body>
 </html>

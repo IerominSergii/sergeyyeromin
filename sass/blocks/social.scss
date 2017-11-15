@@ -5,5 +5,28 @@
 }
 
 .social__item {
+  position: relative;
+  
   font-size: 0;
+}
+
+.social__link {
+  cursor: pointer;
+}
+
+.social__icon {
+  fill: $bg-color-third;
+}
+
+.social__icon:hover {
+  fill: $bg-color-fourth;
+}
+
+.social__icon:active {
+  position: relative;
+  top: 1px;
+}
+
+.social__icon-github {
+  height: 29px;
 }

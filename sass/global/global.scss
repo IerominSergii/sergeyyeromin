@@ -1,11 +1,12 @@
 body {
+  position: relative;
+  
   min-width: 320px;
   
   font-family: $main-font-family;
-  // font-weight: 400;
 
-  background-color: white;
-  color: black;
+  background-color: $bg-color;
+  color: $font-color;
 }
 
 * {
@@ -29,6 +30,8 @@ ul {
 button {
   margin: 0;
   padding: 0;
+  
+  outline: none;
 }
 
 .visually-hidden {

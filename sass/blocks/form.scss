@@ -29,7 +29,10 @@
   padding: 0;
   padding-left: 25px;
   
-  border: 1px solid black;
+  outline: none;
+  border-radius: 5px;
+  border-style: none;
+  background-color: $bg-color-second;
 }
 
 .form__message {
@@ -45,7 +48,10 @@
   font-size: 15px;
   vertical-align: 17px;
   
-  border: 1px solid black;
+  outline: none;
+  border-radius: 5px;
+  border-style: none;
+  background-color: $bg-color-second;
 }
 
 .form__submit-button {
@@ -53,10 +59,49 @@
   
   width: 107px;
   height: 36px;
+  
+  font-size: 12px;
+  vertical-align: 14px;
+  color: $font-color;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: $bg-color-third;
+}
+
+.form__submit-button:hover {
+  color: $bg-color-third;
+  background-color: $bg-color-fourth;
+}
+
+.form__submit-button:active {
+  padding-top: 3px;
+  
+  color: $bg-color-third;
 }
 
 @media (min-width: $tablet-width) {
   .form {
     margin-top: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    margin-left: 50px;
+  }
+  
+  .form__fieldset-wrapper {
+    display: flex;
+  }
+  
+  .form__top-item {
+    flex-grow: 1;
+    
+    width: 175px;
+    margin-right: 25px;
+  }
+  
+  .form__top-item:last-child {
+    margin-right: 0;
   }
 }

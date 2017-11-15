@@ -18,7 +18,8 @@
   
   min-height: 136px;
   
-  background-color: green;
+  background-color: $bg-color-third;
+  color: $bg-color-fourth;
 }
 
 @media (min-width: $tablet-width) {
@@ -26,5 +27,11 @@
     width: 708px;
     flex-wrap: nowrap;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__contacts-wrapper {
+    width: 900px;
   }
 }
