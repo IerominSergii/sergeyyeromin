@@ -22,20 +22,6 @@
   background-color: $bg-color-second;
 }
 
-.project__image-link {
-  cursor: pointer;
-}
-
-.project__image:hover {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
-}
-
-.project__image:active {
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0s;
-}
-
 .project__info {
   display: flex;
   flex-wrap: wrap;
@@ -43,8 +29,6 @@
 }
 
 .project__title {
-  cursor: pointer;
-  
   width: 100%;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -54,23 +38,14 @@
   text-align: center;
 }
 
-.project__title:hover {
-  color: $font-color-second;
-  transition: all 0.2s;
-}
-
-.project__title:active {
-  opacity: 0.5;
-  transition: all 0s;
-}
-
 .project__description {
   margin: 0;
   margin-bottom: 15px;
   padding: 0;
   
-  font-size: 15px;
-  vertical-align: 17px;
+  font-size: 13px;
+  vertical-align: 15px;
+  line-height: 1.6;
   text-align: center;
   color: $font-color-second;
 }
@@ -101,12 +76,42 @@
   margin-right: 0;
 }
 
+.project__link {
+  cursor: pointer;
+  
+  display: block;
+  
+  width: 29px;
+  height: 29px;
+  margin-top: 10px;
+  
+  font-size: 0;
+}
+
+.project__icon-link {
+  fill: $font-color-second;
+  opacity: 0.5;
+}
+
+.project__icon-link:hover {
+  opacity: 0.3;
+}
+
+.project__icon-link:active {
+  opacity: 0.2;
+}
+
 @media (min-width: $tablet-width) {
   .project {
     width: 100%;
     
     padding-top: 55px;
     padding-bottom: 55px;
+  }
+  
+  .project__image {
+    width: 500px;
+    height: auto;
   }
   
   .project__info {
@@ -158,14 +163,5 @@
   
   .project__image {
     width: 430px;
-    height: auto;
-    
-    transition-timing-function: ease-out;
-    transition-duration: 550ms;
-  }
-  
-  .project__image:hover {
-    transition-timing-function: ease-out;
-    transition-duration: 550ms;
   }
 }
