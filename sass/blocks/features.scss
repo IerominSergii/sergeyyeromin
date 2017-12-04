@@ -25,6 +25,13 @@
   height: 60px;
 }
 
+.features__icon:hover {
+  animation-name: shake;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
 .features__icon-wrapper {
   position: relative;
   
