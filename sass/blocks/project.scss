@@ -22,6 +22,20 @@
   background-color: $bg-color-second;
 }
 
+.project__image-link {
+  transition-duration: 0.4s;
+}
+
+.project__image-link:hover {
+  transform: scale(1.03);
+  transition-duration: 0.4s;
+}
+
+.project__image-link:active {
+  transform: scale(1);
+  transition-duration: 0.1s;
+}
+
 .project__info {
   display: flex;
   flex-wrap: wrap;
@@ -36,6 +50,15 @@
   font-size: 25px;
   vertical-align: 29px;
   text-align: center;
+}
+
+.project__title:hover {
+  color: $font-color-second;
+}
+
+.project__title:active {
+  color: $font-color-second;
+  opacity: 0.5;
 }
 
 .project__description {
